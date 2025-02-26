@@ -46,6 +46,12 @@ PRODUCT_PACKAGES += \
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
 
+# Art Opts
+ART_BUILD_TARGET_NDEBUG := false
+ART_BUILD_TARGET_DEBUG := false
+ART_BUILD_HOST_NDEBUG := false
+ART_BUILD_HOST_DEBUG := false
+
 # Flags
 ifeq ($(TARGET_BUILD_VARIANT), user)
     # Strip the local variable table and the local variable type table to reduce
@@ -62,6 +68,9 @@ ifeq ($(TARGET_BUILD_VARIANT), user)
     # modules.
     PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
 endif
+
+# Disable dex2oat debug
+USE_DEX2OAT_DEBUG := false
 
 # YAAP private configuration - optional.
 #$(call inherit-product-if-exists, vendor/yaap-priv/product.mk)
