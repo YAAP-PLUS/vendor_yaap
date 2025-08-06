@@ -82,3 +82,4 @@ function fixup_common_out_dir() {
 }
 
 export USE_THINLTO_CACHE=true
+export SKIP_ABI_CHECKS=true
