@@ -21,6 +21,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.disable_rescue=true
 
+# Disable dexpreopt minidebuginfo
+WITH_DEXPREOPT_DEBUG_INFO := false
+
 #Set Network Hostname
 PRODUCT_PROPERTY_OVERRIDES += \
     net.hostname=$(TARGET_VENDOR_DEVICE_NAME)
