@@ -28,6 +28,8 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+exit()
+
 DEBUG = False
 default_manifest = ".repo/manifest.xml"
 
