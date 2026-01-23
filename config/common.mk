@@ -21,10 +21,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     net.hostname=$(TARGET_VENDOR_DEVICE_NAME)
 
-ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.ota.allow_downgrade=true
-endif
 
 # Charger
 PRODUCT_PACKAGES += \
